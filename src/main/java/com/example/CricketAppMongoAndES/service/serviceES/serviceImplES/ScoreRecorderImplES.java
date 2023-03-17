@@ -1,7 +1,7 @@
 package com.example.CricketAppMongoAndES.service.serviceES.serviceImplES;
 
 import com.example.CricketAppMongoAndES.entities.ScoreRecord;
-import com.example.CricketAppMongoAndES.repository.elasticrepositories.ScoreRecorderRepositoryES;
+import com.example.CricketAppMongoAndES.repository.elasticrepositories.repositoriesImplelastic.ScoreRecorderRepositoryESImpl;
 import com.example.CricketAppMongoAndES.service.serviceES.serviceinterfacesES.ScoreRecorderServiceES;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -11,10 +11,10 @@ import java.util.List;
 @Service
 public class ScoreRecorderImplES implements ScoreRecorderServiceES {
 
-    private final ScoreRecorderRepositoryES scoreRecorderRepository;
+    private final ScoreRecorderRepositoryESImpl scoreRecorderRepository;
 
     @Autowired
-    public ScoreRecorderImplES(ScoreRecorderRepositoryES scoreRecorderRepository) {
+    public ScoreRecorderImplES(ScoreRecorderRepositoryESImpl scoreRecorderRepository) {
         this.scoreRecorderRepository = scoreRecorderRepository;
     }
 

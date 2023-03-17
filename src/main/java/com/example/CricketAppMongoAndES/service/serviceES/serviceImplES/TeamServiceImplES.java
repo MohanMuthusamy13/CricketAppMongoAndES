@@ -2,7 +2,7 @@ package com.example.CricketAppMongoAndES.service.serviceES.serviceImplES;
 
 import com.example.CricketAppMongoAndES.entities.Team;
 import com.example.CricketAppMongoAndES.exceptionhandler.NotFoundException;
-import com.example.CricketAppMongoAndES.repository.elasticrepositories.TeamRepositoryES;
+import com.example.CricketAppMongoAndES.repository.elasticrepositories.repositoriesImplelastic.TeamRepositoryESImpl;
 import com.example.CricketAppMongoAndES.service.serviceES.serviceinterfacesES.TeamServiceES;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -13,10 +13,10 @@ import java.util.List;
 @Service
 public class TeamServiceImplES implements TeamServiceES {
 
-    private final TeamRepositoryES teamRepository;
+    private final TeamRepositoryESImpl teamRepository;
 
     @Autowired
-    public TeamServiceImplES(TeamRepositoryES teamRepository) {
+    public TeamServiceImplES(TeamRepositoryESImpl teamRepository) {
         this.teamRepository = teamRepository;
     }
     @Override

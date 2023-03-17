@@ -1,6 +1,7 @@
-package com.example.CricketAppMongoAndES.repository.elasticrepositories;
+package com.example.CricketAppMongoAndES.repository.elasticrepositories.repositoriesImplelastic;
 
 import com.example.CricketAppMongoAndES.entities.Player;
+import com.example.CricketAppMongoAndES.repository.elasticrepositories.repositoryelastic.PlayerRepositoryES;
 import org.springframework.data.elasticsearch.annotations.Query;
 import org.springframework.data.elasticsearch.repository.ElasticsearchRepository;
 import org.springframework.stereotype.Repository;
@@ -8,7 +9,7 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public interface PlayerRepositoryES extends ElasticsearchRepository<Player, Long> {
+public interface PlayerRepositoryESImpl extends ElasticsearchRepository<Player, Long>, PlayerRepositoryES {
 
     @Query("""
             {
@@ -53,7 +54,6 @@ public interface PlayerRepositoryES extends ElasticsearchRepository<Player, Long
               }""")
     List<Player> getPlayersByTeamAndBaseAbility(String teamName, String baseAbility);
 
-
     @Query("""
             {
                 "match": {
@@ -61,8 +61,4 @@ public interface PlayerRepositoryES extends ElasticsearchRepository<Player, Long
                 }
               }""")
     List<Player> getPlayersByTeamName(String teamName);
-
-
-
-
 }

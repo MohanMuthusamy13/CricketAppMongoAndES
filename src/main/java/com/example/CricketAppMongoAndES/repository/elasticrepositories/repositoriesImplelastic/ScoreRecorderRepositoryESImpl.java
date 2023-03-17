@@ -1,6 +1,7 @@
-package com.example.CricketAppMongoAndES.repository.elasticrepositories;
+package com.example.CricketAppMongoAndES.repository.elasticrepositories.repositoriesImplelastic;
 
 import com.example.CricketAppMongoAndES.entities.ScoreRecord;
+import com.example.CricketAppMongoAndES.repository.elasticrepositories.repositoryelastic.ScoreRecorderRepositoryES;
 import org.springframework.data.elasticsearch.annotations.Query;
 
 import org.springframework.data.elasticsearch.repository.ElasticsearchRepository;
@@ -9,7 +10,7 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public interface ScoreRecorderRepositoryES extends ElasticsearchRepository<ScoreRecord, Long> {
+public interface ScoreRecorderRepositoryESImpl extends ElasticsearchRepository<ScoreRecord, Long>, ScoreRecorderRepositoryES {
 
     @Query("""
             {

@@ -1,13 +1,14 @@
-package com.example.CricketAppMongoAndES.repository.elasticrepositories;
+package com.example.CricketAppMongoAndES.repository.elasticrepositories.repositoriesImplelastic;
 
 import com.example.CricketAppMongoAndES.entities.MatchStatusRecord;
+import com.example.CricketAppMongoAndES.repository.elasticrepositories.repositoryelastic.MatchStatusRepositoryES;
 import org.springframework.data.elasticsearch.annotations.Query;
 import org.springframework.data.elasticsearch.repository.ElasticsearchRepository;
 
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface MatchStatusRepositoryES extends ElasticsearchRepository<MatchStatusRecord, Long> {
+public interface MatchStatusRepositoryESImpl extends ElasticsearchRepository<MatchStatusRecord, Long>, MatchStatusRepositoryES {
 
     @Query("""
             {

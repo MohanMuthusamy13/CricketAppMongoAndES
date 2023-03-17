@@ -2,7 +2,7 @@ package com.example.CricketAppMongoAndES.service.serviceES.serviceImplES;
 
 import com.example.CricketAppMongoAndES.entities.Match;
 import com.example.CricketAppMongoAndES.exceptionhandler.NotFoundException;
-import com.example.CricketAppMongoAndES.repository.elasticrepositories.MatchRepositoryES;
+import com.example.CricketAppMongoAndES.repository.elasticrepositories.repositoriesImplelastic.MatchRepositoryESImpl;
 import com.example.CricketAppMongoAndES.service.serviceES.serviceinterfacesES.MatchServiceES;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -12,10 +12,10 @@ import java.util.List;
 @Service
 public class MatchServiceImplES implements MatchServiceES {
 
-    private final MatchRepositoryES matchRepository;
+    private final MatchRepositoryESImpl matchRepository;
 
     @Autowired
-    public MatchServiceImplES(MatchRepositoryES matchRepository) {
+    public MatchServiceImplES(MatchRepositoryESImpl matchRepository) {
         this.matchRepository = matchRepository;
     }
 

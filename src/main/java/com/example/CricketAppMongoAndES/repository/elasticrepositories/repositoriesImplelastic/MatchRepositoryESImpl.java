@@ -1,6 +1,7 @@
-package com.example.CricketAppMongoAndES.repository.elasticrepositories;
+package com.example.CricketAppMongoAndES.repository.elasticrepositories.repositoriesImplelastic;
 
 import com.example.CricketAppMongoAndES.entities.Match;
+import com.example.CricketAppMongoAndES.repository.elasticrepositories.repositoryelastic.MatchRepositoryES;
 import org.springframework.data.elasticsearch.annotations.Query;
 
 import org.springframework.data.elasticsearch.repository.ElasticsearchRepository;
@@ -9,7 +10,7 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public interface MatchRepositoryES extends ElasticsearchRepository<Match, Long> {
+public interface MatchRepositoryESImpl extends ElasticsearchRepository<Match, Long>, MatchRepositoryES {
 
     List<Match> findByMatchFormat(String matchFormat);
 

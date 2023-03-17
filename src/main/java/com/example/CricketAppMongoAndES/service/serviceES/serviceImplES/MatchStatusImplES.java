@@ -1,7 +1,7 @@
 package com.example.CricketAppMongoAndES.service.serviceES.serviceImplES;
 
 import com.example.CricketAppMongoAndES.entities.MatchStatusRecord;
-import com.example.CricketAppMongoAndES.repository.elasticrepositories.MatchStatusRepositoryES;
+import com.example.CricketAppMongoAndES.repository.elasticrepositories.repositoriesImplelastic.MatchStatusRepositoryESImpl;
 import com.example.CricketAppMongoAndES.service.serviceES.serviceinterfacesES.MatchStatusServiceES;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -9,10 +9,10 @@ import org.springframework.stereotype.Service;
 @Service
 public class MatchStatusImplES implements MatchStatusServiceES {
 
-    private final MatchStatusRepositoryES matchStatusRepository;
+    private final MatchStatusRepositoryESImpl matchStatusRepository;
 
     @Autowired
-    public MatchStatusImplES(MatchStatusRepositoryES matchStatusRepository) {
+    public MatchStatusImplES(MatchStatusRepositoryESImpl matchStatusRepository) {
         this.matchStatusRepository = matchStatusRepository;
     }
 

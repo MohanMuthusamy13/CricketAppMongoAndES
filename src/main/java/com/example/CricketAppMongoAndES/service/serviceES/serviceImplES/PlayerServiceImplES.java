@@ -2,7 +2,7 @@ package com.example.CricketAppMongoAndES.service.serviceES.serviceImplES;
 
 import com.example.CricketAppMongoAndES.entities.Player;
 import com.example.CricketAppMongoAndES.exceptionhandler.NotFoundException;
-import com.example.CricketAppMongoAndES.repository.elasticrepositories.PlayerRepositoryES;
+import com.example.CricketAppMongoAndES.repository.elasticrepositories.repositoriesImplelastic.PlayerRepositoryESImpl;
 import com.example.CricketAppMongoAndES.service.serviceES.serviceinterfacesES.PlayerServiceES;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -12,10 +12,10 @@ import java.util.List;
 @Service
 public class PlayerServiceImplES implements PlayerServiceES {
 
-    private final PlayerRepositoryES playerRepository;
+    private final PlayerRepositoryESImpl playerRepository;
 
     @Autowired
-    public PlayerServiceImplES(PlayerRepositoryES playerRepository) {
+    public PlayerServiceImplES(PlayerRepositoryESImpl playerRepository) {
         this.playerRepository = playerRepository;
     }
     @Override
