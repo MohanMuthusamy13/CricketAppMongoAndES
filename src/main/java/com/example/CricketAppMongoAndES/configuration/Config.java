@@ -8,5 +8,5 @@ import org.springframework.context.annotation.Configuration;
 @ComponentScan(basePackages = "com.example.CricketAppMongoAndES")
 public class Config {
     @Value("${database.use.mongodb}")
-    public static boolean useMongoDatabase = true;
+    public static boolean useMongoDatabase;
 }
